@@ -1,0 +1,193 @@
+/* Login & Signup styles - Modern Institutional Theme */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo-text {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 5px;
+}
+
+.auth-header p {
+  color: var(--text-dim);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+.resend-btn {
+  background-color: transparent;
+  color: var(--primary);
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: -10px;
+}
+
+.resend-btn:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.back-link-btn {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+.back-link-btn:hover {
+  color: var(--text-main);
+}
+
+.role-switcher {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.role-btn {
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+}
+
+.role-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+}
+
+.auth-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-footer a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Google SSO Button */
+.google-sso-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.google-sso-btn:hover {
+  background: var(--bg-card);
+  border-color: var(--border);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.google-sso-btn:active {
+  transform: translateY(0);
+}
+
+/* SSO Divider */
+.sso-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 5px 0;
+}
+
+.sso-divider::before,
+.sso-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--bg-card);
+}
+
+.sso-divider span {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.google-login-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+

@@ -1,0 +1,152 @@
+.profile-page-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-section-header {
+  margin-bottom: 40px;
+}
+
+.profile-section-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.profile-section-header p {
+  color: var(--text-dim);
+  font-size: 1.1rem;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+}
+
+.profile-card {
+  background: var(--bg-card);
+  border: var(--border);
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: var(--shadow);
+  overflow: visible !important;
+  position: relative;
+  z-index: 10;
+}
+
+.profile-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Form Styles */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 1rem;
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+.form-group input:focus, 
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--bg-card);
+  box-shadow: 0 0 0 4px var(--primary-glow);
+}
+
+/* Ensure date picker icon and popup are properly managed and visible in light theme */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 1;
+}
+
+input[type="date"], input[type="time"] {
+  position: relative;
+}
+
+/* Base override for webkit date pickers popping under other elements */
+::-webkit-datetime-edit {
+  z-index: 100;
+}
+
+/* Pro Profile Specific */
+.pro-profile-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+}
+
+.pro-avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pro-avatar-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid var(--bg-card);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.pro-avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .pro-profile-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
